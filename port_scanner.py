@@ -34,7 +34,7 @@ def run_scan(ip, mode, port_range="1-1024"):
             scanner.scan(ip, port_range, "-Pn -T4")
             port1 = (scanner[ip]['tcp'])
             for port in port1:
-                print("Host opened ports are \n{port}")
+                print(f"Host opened ports are \n{port}")
         else:
             print("invalid ip please try again shortly")
             return
